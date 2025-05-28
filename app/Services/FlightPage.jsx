@@ -8,6 +8,7 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
 
 const CLASS_OPTIONS = ['Economy', 'Premium Economy', 'Business', 'First'];
 
@@ -189,9 +190,22 @@ const FlightPage = () => {
 
 
            <TouchableOpacity
-            onPress={() => {
-                alert(`Searching flights from ${from} to ${to} on ${formatDate(departureDate)}${tripType === 'ROUNDTRIP' ? ` returning on ${formatDate(returnDate)}` : ''} for ${getTravellerSummary()}`);
-            }}
+           onPress={() => {
+  router.push({
+    pathname: '/ResultPage',
+    params: {
+      from,
+      to,
+      departureDate: departureDate.toISOString(),
+      returnDate: tripType === 'ROUNDTRIP' ? returnDate.toISOString() : null,
+      adults,
+      children,
+      infants,
+      travelClass: travelClass ?? '',
+    },
+  });
+}}
+
             activeOpacity={0.8}
             style={{ borderRadius: 10, overflow: 'hidden', marginTop: 20 }} 
             >

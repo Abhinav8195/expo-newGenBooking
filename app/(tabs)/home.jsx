@@ -53,6 +53,36 @@ const Home = () => {
 
           <SearchBar />
           <Service/>
+
+             <Animated.View
+    style={[
+      styles.adventureContainer,
+      {
+        opacity: locationTranslateX.interpolate({
+          inputRange: [-100, 0],
+          outputRange: [0, 1],
+        }),
+        transform: [
+          {
+            translateY: locationTranslateX.interpolate({
+              inputRange: [-100, 0],
+              outputRange: [20, 0],
+            }),
+          },
+        ],
+      },
+    ]}
+  >
+    <View style={{ flex: 1 }}>
+      <Text style={styles.adventureText}>Where can your next adventure</Text>
+      <Text style={styles.adventureHeading}>Takes you ?</Text>
+    </View>
+    <Image
+      source={require('../../assets/images/icon1.png')}
+      style={styles.adventureImage}
+    />
+  </Animated.View>
+
         <SliderOptions SliderOPtions={SliderOPtions} />
       </ScrollView>
     </View>
@@ -85,5 +115,30 @@ const styles = StyleSheet.create({
     height: 8,
     backgroundColor: 'red',
     borderRadius: 4,
-  },
+  },adventureContainer: {
+  padding: 20,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: 12,
+},
+
+adventureText: {
+  fontSize: 17,
+  color: 'gray',
+  fontWeight: 'bold',
+},
+
+adventureHeading: {
+  fontSize: 29,
+  color: '#047c7c',
+  fontWeight: 'bold',
+},
+
+adventureImage: {
+  width: 140,
+  height: 150,
+  resizeMode: 'cover',
+},
+
 });

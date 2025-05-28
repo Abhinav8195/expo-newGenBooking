@@ -181,8 +181,7 @@ const styles = StyleSheet.create({
     color: '#333',
     textAlign: 'center',
   },
-  showMoreContainer: {
-    marginTop: 10,
+  showMoreContainer: {  
     alignItems: 'center',
   },
   showMoreText: {
