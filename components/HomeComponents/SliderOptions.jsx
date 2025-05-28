@@ -33,7 +33,7 @@ const SliderOptions = ({ SliderOPtions }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 17, fontWeight: 'bold', padding: 15}}>Offers</Text>
+      <Text style={{ fontSize: 25, fontWeight: 'bold', padding: 15}}>Offers</Text>
       <FlatList
         data={SliderOPtions}
         horizontal
