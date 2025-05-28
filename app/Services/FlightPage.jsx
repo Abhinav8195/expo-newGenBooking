@@ -74,7 +74,7 @@ const FlightPage = () => {
     <View style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.back()}>
           <Entypo name="chevron-left" size={24} color="black" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Flight Search</Text>

@@ -14,14 +14,20 @@ import { useRouter } from 'expo-router'
 const services = [
   { name: 'Flights', icon: require('../../assets/images/air.png'), route: '/Services/FlightPage' },
   { name: 'Hotels', icon: require('../../assets/images/hotel.png'), route: '/hotels' },
+  { name: 'Homestays', icon: require('../../assets/images/homestay.png'), route: '/homestays' },
+  { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/villas' },
+  { name: 'eSIM', icon: require('../../assets/images/internet.png'), route: '/esim' },
+  { name: 'Holiday Packages', icon: require('../../assets/images/luggage.png'), route: '/holiday-packages' },
   { name: 'Trains', icon: require('../../assets/images/train.png'), route: '/trains' },
-  { name: 'Bus', icon: require('../../assets/images/bus.png'), route: '/bus' },
-  { name: 'Holiday', icon: require('../../assets/images/island.png'), route: '/holiday' },
-  { name: 'Cab', icon: require('../../assets/images/taxi.png'), route: '/cab' },
-  { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/cruise' },
+  { name: 'Buses', icon: require('../../assets/images/bus.png'), route: '/bus' },
+  { name: 'Cabs', icon: require('../../assets/images/taxi.png'), route: '/cab' },
   { name: 'Charter', icon: require('../../assets/images/helicopter.png'), route: '/charter' },
+  { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/cruise' },
+  { name: 'Forex & Currency', icon: require('../../assets/images/exchange.png'), route: '/forex' },
+  { name: 'Visa', icon: require('../../assets/images/boarding-pass.png'), route: '/visa' },
   { name: 'Insurance', icon: require('../../assets/images/insurance.png'), route: '/insurance' },
-]
+];
+
 
 const numColumns = 4
 const cardSize = Dimensions.get('window').width / numColumns - 16
