@@ -11,6 +11,7 @@
     "lint": "expo lint"
   },
   "dependencies": {
+    "@animatereactnative/marquee": "^0.5.2",
     "@expo/vector-icons": "^14.1.0",
     "@react-native-community/datetimepicker": "8.3.0",
     "@react-navigation/bottom-tabs": "^7.3.10",
@@ -30,6 +31,7 @@
     "expo-symbols": "~0.4.4",
     "expo-system-ui": "~5.0.7",
     "expo-web-browser": "~14.1.6",
+    "lottie-react-native": "7.2.2",
     "phosphor-react-native": "^2.3.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -39,6 +41,7 @@
     "react-native-animatable": "^1.4.0",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-modal": "^14.0.0-rc.1",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.10.0",

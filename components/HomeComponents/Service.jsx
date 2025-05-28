@@ -18,7 +18,7 @@ const services = [
   { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/villas' },
   { name: 'eSIM', icon: require('../../assets/images/internet.png'), route: '/esim' },
   { name: 'Holiday Packages', icon: require('../../assets/images/luggage.png'), route: '/Services/Holidays' },
-  { name: 'Trains', icon: require('../../assets/images/train.png'), route: '/trains' },
+  { name: 'Trains', icon: require('../../assets/images/train.png'), route: '/Services/Train' },
   { name: 'Buses', icon: require('../../assets/images/bus.png'), route: '/bus' },
   { name: 'Cabs', icon: require('../../assets/images/taxi.png'), route: '/cab' },
   { name: 'Charter', icon: require('../../assets/images/helicopter.png'), route: '/charter' },
