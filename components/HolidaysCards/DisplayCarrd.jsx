@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     elevation: 6,
     alignItems: 'center',
     padding: 12,
-    marginLeft: -2.5, 
+    marginLeft: -3.5, 
   },
   image: {
     width: '100%',

@@ -331,3 +331,105 @@ export const fullFlights = [
     date: '2025-05-31',
   }
 ];
+export const packagess =[
+  {
+    "name": "Romantic Europe Getaway",
+    "location": "Paris, Venice, Lucerne",
+    "duration": "9 Nights / 10 Days",
+    "type": "Honeymoon Package",
+    "price": "₹1,00,000",
+    "description": "Explore the romance of Europe with candlelight dinners, Eiffel Tower visit, gondola ride in Venice, and scenic Swiss Alps.",
+    "image": "https://www.wapititravel.com/blog/wp-content/uploads/2020/06/Venice_Italy.jpg",
+    "activities": ["Eiffel Tower", "Gondola Ride", "Swiss Alps Tour", "Wine Tasting"]
+  },
+  {
+    "name": "Spiritual Varanasi Retreat",
+    "location": "Varanasi, India",
+    "duration": "3 Nights / 4 Days",
+    "type": "Pilgrimage Package",
+    "price": "₹8,500",
+    "description": "Immerse yourself in the spirituality of Varanasi with guided temple visits, Ganga aarti, and boat rides at dawn.",
+    "image": "https://www.travelzonevaranasi.com/sites/default/files/imagenodes/large/Varansi.jpg",
+    "activities": ["Kashi Vishwanath Temple", "Ganga Aarti", "Boat Ride", "Sarnath Tour"]
+  },
+  {
+    "name": "Kerala Ayurveda Rejuvenation",
+    "location": "Munnar, Alleppey, Kovalam",
+    "duration": "6 Nights / 7 Days",
+    "type": "Ayurveda Package",
+    "price": "₹22,000",
+    "description": "Relax with traditional Ayurvedic therapies, backwater houseboat stays, and wellness cuisine.",
+    "image": "https://media1.thrillophilia.com/filestore/330j1qdk2shkzvymsagpujnwk97d_shutterstock_377921479.jpg?ar=16%3A9&w=400&dpr=2",
+    "activities": ["Ayurvedic Massage", "Backwater Cruise", "Yoga", "Tea Plantation Tour"]
+  },
+  {
+    "name": "Manali Adventure Thrill",
+    "location": "Manali, India",
+    "duration": "5 Nights / 6 Days",
+    "type": "Adventure Package",
+    "price": "₹14,000",
+    "description": "Experience snow activities, trekking, and river rafting in the scenic hills of Himachal.",
+    "image": "https://media.assettype.com/outlooktraveller%2F2023-11%2Fcadcbaf8-a8c0-413c-b896-ae56724d3c1d%2Fshutterstock_1653595066.jpg",
+    "activities": ["Paragliding", "Trekking", "River Rafting", "Snowboarding"]
+  },
+  {
+    "name": "Goa Leisure Escape",
+    "location": "Goa, India",
+    "duration": "4 Nights / 5 Days",
+    "type": "Leisure Package",
+    "price": "₹9,999",
+    "description": "Relax on sun-kissed beaches, enjoy vibrant nightlife, and explore Goan cuisine.",
+    "image": "https://3.imimg.com/data3/RU/MX/MY-7516435/goa-beachs.jpg",
+    "activities": ["Beach Hopping", "Casino Night", "Sunset Cruise", "Fort Aguada Visit"]
+  },
+  {
+    "name": "Thailand Group Fiesta",
+    "location": "Bangkok, Pattaya",
+    "duration": "6 Nights / 7 Days",
+    "type": "Group Departure Package",
+    "price": "₹32,500",
+    "description": "Enjoy buzzing city life, coral islands, and shopping with a group of fellow travelers.",
+    "image": "https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCity%2FBangkok-City-tour-With-Lunch-2.jpg&w=3840&q=90",
+    "activities": ["Coral Island Tour", "Alcazar Show", "Floating Market", "Street Food Tour"]
+  },
+  {
+    "name": "Mystical Leh-Ladakh Expedition",
+    "location": "Leh, Nubra, Pangong",
+    "duration": "7 Nights / 8 Days",
+    "type": "Adventure Package",
+    "price": "₹26,000",
+    "description": "Conquer high-altitude passes, explore monasteries, and camp by the Pangong Lake.",
+    "image": "https://www.lehladakhtourism.com/ladakh-packages/images/nubra-pangong/ladakh1.jpg",
+    "activities": ["Khardung La Pass", "Camel Safari", "Lake Camping", "Monastery Tour"]
+  },
+  {
+    "name": "Rajasthan Royal Heritage Tour",
+    "location": "Jaipur, Jodhpur, Udaipur",
+    "duration": "5 Nights / 6 Days",
+    "type": "Family Package",
+    "price": "₹17,500",
+    "description": "Explore majestic palaces, forts, cultural shows, and local markets of royal Rajasthan.",
+    "image": "https://pmlholidays.com/admin/production/images/blogs/Best-Places-to-visit-in-Rajasthan%20compress.jpg",
+    "activities": ["City Palace", "Desert Safari", "Light & Sound Show", "Shopping Bazaar"]
+  },
+  {
+    "name": "South India Temple Circuit",
+    "location": "Madurai, Rameshwaram, Kanyakumari",
+    "duration": "6 Nights / 7 Days",
+    "type": "Pilgrimage Package",
+    "price": "₹15,500",
+    "description": "Visit famous temples and spiritual landmarks in Tamil Nadu and Kerala.",
+    "image": "https://www.epicyatra.com/wp-content/uploads/2023/05/main-qimg-5565f3379d32605e33f0994ef95c2c68-lq.webp",
+    "activities": ["Meenakshi Temple", "Vivekananda Rock", "Ramanathaswamy Temple", "Sunrise View"]
+  },
+  {
+    "name": "Andaman Island Escape",
+    "location": "Port Blair, Havelock Island",
+    "duration": "5 Nights / 6 Days",
+    "type": "Leisure Package",
+    "price": "₹20,000",
+    "description": "Dive into pristine beaches, crystal clear waters, and underwater adventures.",
+    "image": "https://www.india.com/wp-content/uploads/2019/10/Andaman-Nicobar.jpg",
+    "activities": ["Snorkeling", "Scuba Diving", "Beach Relaxation", "Cellular Jail Visit"]
+  }
+]

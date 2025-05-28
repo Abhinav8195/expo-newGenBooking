@@ -12,6 +12,7 @@ import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-ico
 import { router } from 'expo-router';
 import DisplayCarrd from '../../components/HolidaysCards/DisplayCarrd';
 import DisplayCard from '../../components/HolidaysCards/DisplayCarrd';
+import Packages from '../../components/HolidaysCards/Packages';
 
 const categories = [
   { name: 'Honeymoon', icon: 'heart-multiple' }, 
@@ -171,6 +172,7 @@ const Holidays = () => {
        <DisplayCard
   destinations={destinationsByCategory[selectedCategory] || []}
 />
+<Packages/>
       </View>
     </Animated.ScrollView>
   );
