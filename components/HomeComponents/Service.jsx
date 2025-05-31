@@ -25,7 +25,7 @@ const services = [
   { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/cruise' },
   { name: 'Forex & Currency', icon: require('../../assets/images/exchange.png'), route: '/forex' },
   { name: 'Visa', icon: require('../../assets/images/boarding-pass.png'), route: '/visa' },
-  { name: 'Insurance', icon: require('../../assets/images/insurance.png'), route: '/insurance' },
+  { name: 'Insurance', icon: require('../../assets/images/insurance.png'), route: '/Services/Insurance' },
 ];
 
 
