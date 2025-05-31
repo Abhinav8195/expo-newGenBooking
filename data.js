@@ -435,3 +435,92 @@ export const packagess =[
 ]
 
 
+export const cruiseOfferCard = [
+  {
+    id: 1,
+    title: "Mesmerizing Ocean Views",
+    description: "Witness captivating horizons, golden sunsets, and stunning coastal landscapes that will leave you enchanted.",
+    price: 40000,
+    image: "https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg",
+    button: "Explore"
+  },
+  {
+    id: 2,
+    title: "Ultimate Luxury on Board",
+    description: "Experience world-class amenities, gourmet dining, and unmatched service in the lap of oceanic luxury.",
+    price: 55000,
+    image: "https://www.cruises.com/images/web/44/1263/shp/ship_sm.jpg",
+    button: "Explore"
+  },
+  {
+    id: 3,
+    title: "Tropical Island Escape",
+    description: "Cruise through turquoise waters to discover secluded beaches and lush tropical islands.",
+    price: 48000,
+    image: "https://www.cruzely.com/wp-content/uploads/icon-aft-sm.jpg",
+    button: "Explore"
+  },
+  {
+    id: 4,
+    title: "Mediterranean Marvels",
+    description: "Sail along the Mediterranean coast and explore historic cities, azure waters, and ancient wonders.",
+    price: 60000,
+    image: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/870/420/75/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/ships/destiny/overview/O_sh01_fr1420_x2_v3-Bow-v2-2x1.jpg?2024-07-25T18:09:00+00:00",
+    button: "Explore"
+  },
+  {
+    id: 5,
+    title: "Arctic Expedition Voyage",
+    description: "Embark on an adventurous cruise to witness glaciers, polar wildlife, and the Northern Lights.",
+    price: 85000,
+    image: "https://t3.ftcdn.net/jpg/01/49/80/00/360_F_149800067_6TzchoMIijIG7y241uQexxzWROibrGuo.jpg",
+    button: "Explore"
+  },
+  {
+    id: 6,
+    title: "Romantic Sunset Sail",
+    description: "Perfect for couples—enjoy candlelit dinners, serene waters, and magical sunset backdrops.",
+    price: 38000,
+    image: "https://static.toiimg.com/thumb/103573944/cruise.jpg?width=1200&height=900",
+    button: "Explore"
+  }
+];
+
+export const cruiseDestinations = [
+  {
+    id: 1,
+    title: 'UK Cruise',
+    flag: '🇬🇧',
+    image: 'https://img.etimg.com/thumb/width-1200,height-1200,imgsize-158410,resizemode-75,msid-110265744/magazines/panache/is-anand-mahindra-planning-to-launch-a-luxury-cruise-ship-tycoon-drops-pic-of-worlds-largest-cruise-vessel-triggering-speculations.jpg',
+  },
+  {
+    id: 2,
+    title: 'Europe Cruise',
+    flag: '🇪🇺',
+    image: 'https://static.wixstatic.com/media/2cd8ac_9f3bdaa0e7014bb4aa11bf3ed89bdee7~mv2.jpg/v1/fill/w_640,h_390,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2cd8ac_9f3bdaa0e7014bb4aa11bf3ed89bdee7~mv2.jpg',
+  },
+  {
+    id: 3,
+    title: 'Italy Cruise',
+    flag: '🇮🇹',
+    image: 'https://cruisefever.net/wp-content/uploads/2025/04/wonderoftheseascruiseship.jpg',
+  },
+  {
+    id: 4,
+    title: 'Spain Cruise',
+    flag: '🇪🇸',
+    image: 'https://etimg.etb2bimg.com/photo/117475809.cms',
+  },
+  {
+    id: 5,
+    title: 'China Cruise',
+    flag: '🇨🇳',
+    image: 'https://marinedc.com/media/bilder/referansegalleri/midnatsol1.png',
+  },
+  {
+    id: 6,
+    title: 'Korea Cruise',
+    flag: '🇰🇷',
+    image: 'https://s3.amazonaws.com/cms.ipressroom.com/412/files/202504/67eea6123d6332920e37f52c_Sunsation+Point+Aerial+Rendering/Sunsation+Point+Aerial+Rendering_social.jpg',
+  },
+];
