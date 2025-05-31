@@ -22,9 +22,9 @@ const services = [
   { name: 'Buses', icon: require('../../assets/images/bus.png'), route: '/bus' },
   { name: 'Cabs', icon: require('../../assets/images/taxi.png'), route: '/cab' },
   { name: 'Charter', icon: require('../../assets/images/helicopter.png'), route: '/charter' },
-  { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/cruise' },
+  { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/Services/Cruise' },
   { name: 'Forex & Currency', icon: require('../../assets/images/exchange.png'), route: '/forex' },
-  { name: 'Visa', icon: require('../../assets/images/boarding-pass.png'), route: '/visa' },
+  { name: 'Visa', icon: require('../../assets/images/boarding-pass.png'), route: '/Services/Visa' },
   { name: 'Insurance', icon: require('../../assets/images/insurance.png'), route: '/Services/Insurance' },
 ];
 

@@ -433,3 +433,5 @@ export const packagess =[
     "activities": ["Snorkeling", "Scuba Diving", "Beach Relaxation", "Cellular Jail Visit"]
   }
 ]
+
+
