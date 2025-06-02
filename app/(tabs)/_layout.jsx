@@ -32,13 +32,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="wishlist"
         options={{
           title: 'Wishlist',
           tabBarIcon: ({ color }) => <MaterialIcons name="favorite-border" size={24} color={color} />,
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="cart"
         options={{
