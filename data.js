@@ -642,3 +642,290 @@ export const busTrips = [
     rating: 4.2,
   },
 ];
+
+
+export const staysData = [
+  // ----------- Villas -----------
+  {
+    type: "villas",
+    name: "Seaside Bliss Villa",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/625956715.jpg?k=84123a79347e4387f177989cb194239d9ebd9a510d2a45ee363694d7794b6cbc&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/625957100.jpg?k=36d9a7bde57f0178b151cfe177ded959991d594a454857b37f1a8b12c1e030ee&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/625956579.jpg?k=1bd9d54f49eec62b03342a38110989090f99b3b4d5964659e3f5485af84f4e30&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/625956632.jpg?k=ba49052e1c82209f88770d19caa9098826c739618329fd78d784b54279cc6984&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/633443237.jpg?k=a16337648ff7d6f9f0a0f062e3c89315aeb7ac78ce24f48e0e6fa089f14e233b&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/625957062.jpg?k=f30b356a1901c4793398056d441547b02ec05a35716afe293e501b9f185ccff5&o=&hp=1"
+    ],
+    rating: 4.8,
+    reviews: 97,
+    stars: 5,
+    sleeps: 4,
+    oldPrice: 18000,
+    newPrice: 14500,
+    breakfast: "Included",
+    features: [
+      "Stunning ocean views",
+      "Private infinity pool",
+      "Spacious garden",
+      "Luxurious jacuzzi"
+    ]
+  },
+  {
+    type: "villas",
+    name: "Himalayan Luxe Retreat",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/633083115.jpg?k=2afea38d5eac222bd3998d93b19cb095b54d12b37406238bc5f6495445143929&o=&hp=1",
+      "https://img.vistarooms.com/gallery/compressed/retreat-cottages-4b2921.jpg",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/400530472.jpg?k=d1d4307c6ed6adb66643076499a3a9109376520ec471101820c5d572b7601661&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/633083076.jpg?k=a44b99da663e00bf50bb28347b5a373cfbebef85d7ffbb43c63f50d180494083&o=&hp=1"
+    ],
+    rating: 4.6,
+    reviews: 120,
+    stars: 4,
+    sleeps: 6,
+    oldPrice: 16000,
+    newPrice: 12800,
+    breakfast: "Available at extra charge",
+    features: [
+      "Stunning mountain views",
+      "Delicious food options",
+      "Cozy rooms with jacuzzi",
+      "Terrace with fireplace"
+    ]
+  },
+  {
+    type: "villas",
+    name: "The Palm Serenity",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/532349845.jpg?k=5b10120f0fff2aee6b23f86b7b653b5f7e0d52078bdc2913a1f2ec0245766115&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/532349827.jpg?k=3fdede62760fc3293c574ef08671061cd3c402a1747fbf8182b405ae7bacff56&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/532349844.jpg?k=3169aebc36af784bc0ae7d70003517612c839a55112c4f4334b6a93f4dfcea3a&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/532349822.jpg?k=0f9f80d594a502d7e33b9713dea13cbd132251fd8af9620ee7a03f75d7ae4ee5&o=&hp=1"
+    ],
+    rating: 4.7,
+    reviews: 85,
+    stars: 5,
+    sleeps: 8,
+    oldPrice: 22000,
+    newPrice: 19000,
+    breakfast: "Included",
+    features: [
+      "Private beach access",
+      "Chef on request",
+      "Poolside bar",
+      "Spacious interiors"
+    ]
+  },
+  {
+    type: "villas",
+    name: "Hilltop Harmony Villa",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/567779942.jpg?k=eaf300552e8ccce216c4955e7a3aee40a6771ce5a89e0277461c644424b9293d&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/568839756.jpg?k=02c6414c427379f638cd797bdd060c6f9a1ccc325afeb14af14644a1316c6d51&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/568852636.jpg?k=b8d5c1e645394b917d1e7bb40b89b5735c0ee8dcda8d641bb49212e5c236d40e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/568839746.jpg?k=477bd79b529ed8b55b22118f5ac755d13e4b9da616286c908cfd2de99c971c39&o=&hp=1"
+    ],
+    rating: 4.5,
+    reviews: 110,
+    stars: 4,
+    sleeps: 5,
+    oldPrice: 15000,
+    newPrice: 12500,
+    breakfast: "Available at extra charge",
+    features: [
+      "360° hill views",
+      "Indoor fireplace",
+      "Jacuzzi & sauna",
+      "Nature trail nearby"
+    ]
+  },
+
+  // ----------- Homes -----------
+  {
+    type: "Hotel",
+    name: "The Urban Nest",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/595363876.jpg?k=bd7995e28b81700bf33c64a5974d92c1dcffbce243b2e756cd40b8c5efca2621&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/596243676.jpg?k=5358cb7388f6912597a29cd57fc789e3489f96ffe351ac8c64361afa139c6a10&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/596243645.jpg?k=fa2d9382d6179b835c30c8fe255b5483db09d1ab08c4bd892f9c9e471457b9fe&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/331796436.jpg?k=3e0e0167818f7b4048403d3fb463c015deb4ed4e2a7d57e9bee529dfb31a3819&o=&hp=1"
+    ],
+    rating: 4.3,
+    reviews: 62,
+    stars: 3,
+    sleeps: 3,
+    oldPrice: 7500,
+    newPrice: 6200,
+    breakfast: "Included",
+    features: [
+      "Smart appliances",
+      "Fast Wi-Fi",
+      "Fully equipped kitchen",
+      "Minimalist decor"
+    ]
+  },
+  {
+    type: "Hotel",
+    name: "Rustic Riverside Home",
+    images: [
+      "https://i0.wp.com/ashercustomhomes.com/wp-content/uploads/2020/09/exterior-1_rustic-riverside.jpg?fit=1920%2C1280&ssl=1",
+      "https://jainc.com/wp-content/uploads/2024/01/08_Riverside-Cabins-formatted.jpg",
+      "https://jainc.com/wp-content/uploads/2024/01/02_Riverside-Cabins-formatted.jpg",
+      "https://jainc.com/wp-content/uploads/2024/01/07_Riverside-Cabins-formatted.jpg"
+    ],
+    rating: 4.6,
+    reviews: 88,
+    stars: 4,
+    sleeps: 4,
+    oldPrice: 9000,
+    newPrice: 7900,
+    breakfast: "Available at extra charge",
+    features: [
+      "Riverside deck",
+      "Barbecue grill",
+      "Pet-friendly",
+      "Firewood included"
+    ]
+  },
+  {
+    type: "Hotel",
+    name: "Modern Midtown Haven",
+    images: [
+      "https://placehold.co/400x300?text=Home+3A",
+      "https://placehold.co/400x300?text=Home+3B",
+      "https://placehold.co/400x300?text=Home+3C",
+      "https://placehold.co/400x300?text=Home+3D"
+    ],
+    rating: 4.2,
+    reviews: 54,
+    stars: 3,
+    sleeps: 2,
+    oldPrice: 7000,
+    newPrice: 5900,
+    breakfast: "Included",
+    features: [
+      "Easy metro access",
+      "Balcony with city view",
+      "Workspace setup",
+      "Private parking"
+    ]
+  },
+  {
+    type: "Hotel",
+    name: "Countryside Green Escape",
+    images: [
+      "https://placehold.co/400x300?text=Home+4A",
+      "https://placehold.co/400x300?text=Home+4B",
+      "https://placehold.co/400x300?text=Home+4C",
+      "https://placehold.co/400x300?text=Home+4D"
+    ],
+    rating: 4.4,
+    reviews: 71,
+    stars: 4,
+    sleeps: 6,
+    oldPrice: 9800,
+    newPrice: 8500,
+    breakfast: "Available at extra charge",
+    features: [
+      "Farm view patio",
+      "Large backyard",
+      "Organic breakfast option",
+      "Bike rental available"
+    ]
+  },
+
+  // ----------- Homestays -----------
+  {
+    type: "Homestay",
+    name: "Misty Meadows Homestay",
+    images: [
+      "https://r1imghtlak.mmtcdn.com/fcdddf6a90b111ec92940a58a9feac02.jpeg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/0677ec2890b211ecaef20a58a9feac02.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/0677ec2890b211ecaef20a58a9feac02.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/0677ec2890b211ecaef20a58a9feac02.jpg?downsize=540:*"
+    ],
+    rating: 4.9,
+    reviews: 143,
+    stars: 5,
+    sleeps: 4,
+    oldPrice: 10000,
+    newPrice: 8700,
+    breakfast: "Included",
+    features: [
+      "Hosted by local family",
+      "Freshly cooked meals",
+      "Tea garden walk",
+      "Cozy fireplace lounge"
+    ]
+  },
+  {
+    type: "Homestay",
+    name: "Lakeview Retreat Homestay",
+    images: [
+      "https://www.resortsneardelhi.co.in/backendres/images/banner/15516861471.jpg",
+      "https://placehold.co/400x300?text=Homestay+2B",
+      "https://placehold.co/400x300?text=Homestay+2C",
+      "https://placehold.co/400x300?text=Homestay+2D"
+    ],
+    rating: 4.5,
+    reviews: 98,
+    stars: 4,
+    sleeps: 3,
+    oldPrice: 8200,
+    newPrice: 7100,
+    breakfast: "Available at extra charge",
+    features: [
+      "Lake view balcony",
+      "Authentic local cuisine",
+      "Boat ride access",
+      "Hammock garden"
+    ]
+  },
+  {
+    type: "Homestay",
+    name: "Sunset Valley Stay",
+    images: [
+      "https://placehold.co/400x300?text=Homestay+3A",
+      "https://placehold.co/400x300?text=Homestay+3B",
+      "https://placehold.co/400x300?text=Homestay+3C",
+      "https://placehold.co/400x300?text=Homestay+3D"
+    ],
+    rating: 4.6,
+    reviews: 85,
+    stars: 4,
+    sleeps: 2,
+    oldPrice: 6800,
+    newPrice: 5900,
+    breakfast: "Included",
+    features: [
+      "Mountain sunset view",
+      "Organic garden",
+      "Board games and library",
+      "Outdoor bonfire setup"
+    ]
+  },
+  {
+    type: "Homestay",
+    name: "Jungle Nook Homestay",
+    images: [
+      "https://placehold.co/400x300?text=Homestay+4A",
+      "https://placehold.co/400x300?text=Homestay+4B",
+      "https://placehold.co/400x300?text=Homestay+4C",
+      "https://placehold.co/400x300?text=Homestay+4D"
+    ],
+    rating: 4.4,
+    reviews: 67,
+    stars: 3,
+    sleeps: 5,
+    oldPrice: 9200,
+    newPrice: 7700,
+    breakfast: "Available at extra charge",
+    features: [
+      "Surrounded by forest",
+      "Nature walk with guide",
+      "Eco-friendly rooms",
+      "Cultural dinner nights"
+    ]
+  }
+];
