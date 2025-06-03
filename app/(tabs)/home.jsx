@@ -17,6 +17,7 @@ import { SliderOPtions } from '../../data';
 import SliderOptions from '../../components/HomeComponents/SliderOptions';
 import Service from '../../components/HomeComponents/Service';
 import Menu from '../../components/Menu';
+import { router } from 'expo-router';
 
 const { width } = Dimensions.get('window');
 
@@ -78,7 +79,7 @@ const Home = () => {
         </View>
 
         <Animated.View style={{ transform: [{ translateX: notificationTranslateX }] }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> router.push('/Notification')}>
             <View style={{ position: 'relative' }}>
               <MaterialIcons name="notifications" size={26} color="#247ba0" />
               {notifications && <View style={styles.badge} />}

@@ -6,10 +6,26 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
+  Linking,
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Menu = () => {
+  const openInstagram = () => {
+  Linking.openURL('https://www.instagram.com/abhinav_8195/');
+};
+
+const openTwitter = () => {
+  Linking.openURL('https://x.com/8195Abhinav');
+};
+
+const openFacebook = () => {
+  Linking.openURL('https://www.instagram.com/abhinav_8195/');
+};
+
+const openYoutube = () => {
+  Linking.openURL('https://www.youtube.com/@vloginwithabhinav');
+};
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 40 }} showsVerticalScrollIndicator={false}>
       {/* Profile Section */}
@@ -74,10 +90,10 @@ const Menu = () => {
       {/* Social Media */}
       <Section title="Follow Us">
         <View style={styles.socialRow}>
-          <MaterialCommunityIcons name="facebook" size={24} color="#3b5998" />
-          <MaterialCommunityIcons name="twitter" size={24} color="#1DA1F2" />
-          <MaterialCommunityIcons name="instagram" size={24} color="#C13584" />
-          <MaterialCommunityIcons name="youtube" size={24} color="#FF0000" />
+          <MaterialCommunityIcons onPress={openFacebook} name="facebook" size={24} color="#3b5998" />
+      <MaterialCommunityIcons onPress={openTwitter} name="twitter" size={24} color="#1DA1F2" />
+      <MaterialCommunityIcons onPress={openInstagram} name="instagram" size={24} color="#C13584" />
+      <MaterialCommunityIcons onPress={openYoutube} name="youtube" size={24} color="#FF0000" />
         </View>
       </Section>
     </ScrollView>

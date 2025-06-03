@@ -5,53 +5,66 @@ import {
   TouchableOpacity,
   View,
   Switch,
+  ScrollView,
+  SafeAreaView,
 } from 'react-native';
 import React, { useState } from 'react';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
+import { router } from 'expo-router';
 
 const Profile = () => {
   const [emailAds, setEmailAds] = useState(false);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>My Profile</Text>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <Text style={styles.heading}>My Profile</Text>
 
-      {/* Profile Header Card */}
-      <Animatable.View animation="fadeInDown" duration={800} style={styles.profileCard}>
-        <TouchableOpacity style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <View style={styles.profileRow}>
-            <Image source={require('../../assets/images/profile.png')} style={styles.profileImage} />
-            <View>
-              <Text style={styles.profileName}>Abhinav Bhatia</Text>
-              <Text style={styles.profileEmail}>abhinavbhatgia7460@gmail.com</Text>
+        {/* Profile Header Card */}
+        <Animatable.View animation="fadeInDown" duration={800} style={styles.profileCard}>
+          <TouchableOpacity
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+            onPress={() =>router.push('/EditProfile')}
+          >
+            <View style={styles.profileRow}>
+              <Image source={require('../../assets/images/profile.png')} style={styles.profileImage} />
+              <View>
+                <Text style={styles.profileName}>Abhinav Bhatia</Text>
+                <Text style={styles.profileEmail}>abhinavbhatgia7460@gmail.com</Text>
+              </View>
             </View>
-          </View>
-          <MaterialIcons name="edit" size={24} color="white" />
-        </TouchableOpacity>
-      </Animatable.View>
+            <MaterialIcons name="edit" size={24} color="white" />
+          </TouchableOpacity>
+        </Animatable.View>
 
-      {/* First Section */}
-      <Animatable.View animation="fadeInUp" delay={200} duration={600} style={styles.card}>
-        <MenuItem title="My Account" subtitle="Make changes to your account" icon="person-outline" />
-        <MenuItem title="My Bookings" subtitle="Manage your process of booking" icon="bookmark-outline" />
-        <MenuItem
-          title="Receive email ads"
-          subtitle="Manage your email ads"
-          icon="mail-outline"
-          right={<Switch value={emailAds} onValueChange={setEmailAds} />}
-        />
-        <MenuItem title="My Interest" subtitle="Further manage your interest" icon="heart-outline" />
-        <MenuItem title="Log out" subtitle="Logout this account to add another" icon="log-out-outline" />
-      </Animatable.View>
+        {/* First Section */}
+        <Animatable.View animation="fadeInUp" delay={200} duration={600} style={styles.card}>
+          <MenuItem title="My Account" subtitle="Make changes to your account" icon="person-outline" />
+          <MenuItem title="My Bookings" subtitle="Manage your process of booking" icon="bookmark-outline" />
+          <MenuItem
+            title="Receive email ads"
+            subtitle="Manage your email ads"
+            icon="mail-outline"
+            right={<Switch value={emailAds} onValueChange={setEmailAds} />}
+          />
+          <MenuItem title="My Interest" subtitle="Further manage your interest" icon="heart-outline" />
+          <MenuItem title="Log out" subtitle="Logout this account to add another" icon="log-out-outline" />
+        </Animatable.View>
 
-      {/* Second Section */}
-      <Animatable.View animation="fadeInUp" delay={400} duration={600} style={styles.card}>
-        <MenuItem title="Help & Support" icon="help-circle-outline" />
-        <MenuItem title="About App" icon="information-circle-outline" />
-      </Animatable.View>
-    </View>
+        {/* Second Section */}
+        <Animatable.View animation="fadeInUp" delay={400} duration={600} style={styles.card}>
+          <MenuItem title="Help & Support" icon="help-circle-outline" />
+          <MenuItem title="About App" icon="information-circle-outline" />
+        </Animatable.View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -76,10 +89,13 @@ const MenuItem = ({ title, subtitle, icon, right }) => (
 export default Profile;
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: '#ffffff',
+  },
+  scrollContent: {
     padding: 20,
+    paddingBottom: 40,
   },
   heading: {
     fontWeight: '500',
@@ -141,7 +157,7 @@ const styles = StyleSheet.create({
   },
   menuLeft: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center', 
     gap: 12,
     flex: 1,
   },

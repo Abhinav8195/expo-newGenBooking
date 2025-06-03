@@ -13,14 +13,14 @@ import { useRouter } from 'expo-router'
 
 const services = [
   { name: 'Flights', icon: require('../../assets/images/air.png'), route: '/Services/FlightPage' },
-  { name: 'Hotels', icon: require('../../assets/images/hotel.png'), route: '/hotels' },
-  { name: 'Homestays', icon: require('../../assets/images/homestay.png'), route: '/homestays' },
-  { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/villas' },
-  { name: 'eSIM', icon: require('../../assets/images/internet.png'), route: '/esim' },
+  { name: 'Hotels', icon: require('../../assets/images/hotel.png'), route: '/Services/Stays',params: { type: 'Hotel' } },
+  { name: 'Homestays', icon: require('../../assets/images/homestay.png'), route: '/Services/Stays',  params: { type: 'Homestay' } },
+  { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/Services/Stays', params: { type: 'villas' } },
+  { name: 'eSIM', icon: require('../../assets/images/internet.png'), route: '/Services/Esim' },
   { name: 'Holiday Packages', icon: require('../../assets/images/luggage.png'), route: '/Services/Holidays' },
   { name: 'Trains', icon: require('../../assets/images/train.png'), route: '/Services/Train' },
   { name: 'Buses', icon: require('../../assets/images/bus.png'), route: '/Services/Bus' },
-  { name: 'Cabs', icon: require('../../assets/images/taxi.png'), route: '/cab' },
+  { name: 'Cabs', icon: require('../../assets/images/taxi.png'), route: '/Services/Cabs' },
   { name: 'Charter', icon: require('../../assets/images/helicopter.png'), route: '/Services/Charter' },
   { name: 'Cruise', icon: require('../../assets/images/cruise-ship.png'), route: '/Services/Cruise' },
   { name: 'Forex & Currency', icon: require('../../assets/images/exchange.png'), route: '/Services/Forex' },
@@ -37,10 +37,17 @@ const Service = () => {
 
    const router = useRouter()
 
-  const handlePress = (route) => {
-    console.log(route)
-    router.push(route)
+  const handlePress = (item) => {
+  if (item.params) {
+    router.push({
+      pathname: item.route,
+      params: item.params,
+    });
+  } else {
+    router.push(item.route);
   }
+}
+
 
   const rotateAnim = useRef(new Animated.Value(0)).current
 
@@ -64,7 +71,7 @@ const Service = () => {
     <View style={styles.container}>
       <View style={styles.grid}>
         {displayedServices.map((item, index) => (
-          <AnimatedCard key={index} icon={item.icon} name={item.name} index={index} onPress={() => handlePress(item.route)} />
+          <AnimatedCard key={index} icon={item.icon} name={item.name} index={index} onPress={() => handlePress(item)} />
         ))}
       </View>
 
