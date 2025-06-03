@@ -12,6 +12,9 @@ import {
 import React, { useState, useEffect, useRef } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { LinearGradient } from 'expo-linear-gradient';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 if (Platform.OS === 'android') {
   UIManager.setLayoutAnimationEnabledExperimental?.(true);
@@ -39,20 +42,48 @@ const FlightCard = ({ flight, index = 0 }) => {
     return new Date(time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
+  // Taxes
+  const taxes = {
+    UDF: 152,
+    YR: 50,
+    K3: 110,
+    OtherTaxes: 236,
+  };
+
+  const sampleFlight = {
+  from: "Delhi",
+  to: "Chandigarh",
+  fromCode: "DEL",
+  toCode: "IXC",
+  date: "Tue-03 Jun 2025",
+  departureTime: "9:30 PM",
+  arrivalTime: "10:25 PM",
+  duration: "0h 55m",
+  airline: "Indigo",
+  flightNumber: "6E-2194",
+  class: "Economy",
+  checkin: "15 Kilograms",
+  cabin: "7 KG",
+  image:'https://play-lh.googleusercontent.com/zG1e9Pdw27RYpUo_TpSZcD-zjCeShkN5pxwgy7L-e9hra170T_SpBzcUc5nsBu3gWQ'
+};
+
+  // Calculate total price = base price + sum of taxes
+  const basePrice = flight.price;
+  const totalTaxes = Object.values(taxes).reduce((a, b) => a + b, 0);
+  const totalPrice = basePrice + totalTaxes;
+
   return (
     <Animated.View style={{ opacity: fadeAnim }}>
-      <TouchableOpacity style={styles.card} onPress={toggleExpand}>
-        {/* Airline + Price */}
+      <TouchableOpacity style={styles.card} onPress={toggleExpand} activeOpacity={0.8}>
         <View style={styles.topRow}>
           <Image source={{ uri: flight.airline.logo }} style={styles.logo} />
           <View style={{ flex: 1, marginLeft: 10 }}>
             <Text style={styles.airlineName}>{flight.airline.name}</Text>
             <Text style={styles.flightNumber}>Flight: {flight.id}</Text>
           </View>
-          <Text style={styles.price}>₹ {flight.price}</Text>
+          <Text style={styles.price}>₹ {basePrice}</Text>
         </View>
 
-        {/* Time + Duration */}
         <View style={styles.timeRow}>
           <View style={styles.timeBlock}>
             <Text style={styles.time}>{formatTime(flight.from.time)}</Text>
@@ -70,7 +101,6 @@ const FlightCard = ({ flight, index = 0 }) => {
           </View>
         </View>
 
-        {/* Expanded section */}
         {expanded && (
           <View style={styles.details}>
             <View style={styles.infoBlock}>
@@ -114,13 +144,60 @@ const FlightCard = ({ flight, index = 0 }) => {
                 ))
               )}
             </View>
+
+            <View style={styles.infoBlock}>
+              <Text style={styles.sectionTitle}>Tax Breakdown</Text>
+              {Object.entries(taxes).map(([key, value]) => (
+                <View style={styles.taxRow} key={key}>
+                  <Text style={styles.taxLabel}>{key}:</Text>
+                  <Text style={styles.taxValue}>{value}</Text>
+                </View>
+              ))}
+            </View>
+
+            <View style={styles.infoBlock}>
+              <View style={styles.priceRow}>
+                <Text style={styles.basePrice}>Base Price:</Text>
+                <Text style={styles.basePriceValue}>₹ {basePrice}</Text>
+              </View>
+              <View style={styles.priceRow}>
+                <Text style={styles.totalPrice}>Total Price:</Text>
+                <Text style={styles.totalPriceValue}>₹ {totalPrice}</Text>
+              </View>
+            </View>
+
+            <TouchableOpacity
+                onPress={() => 
+                  router.push({
+                    pathname: '/FlightPages/BookNow',
+                    params: {
+                      flight: JSON.stringify(sampleFlight),
+                    },
+                  })
+                }
+                activeOpacity={0.7}
+              >
+              <LinearGradient
+                colors={['#4c669f', '#3b5998', '#192f6a']}
+                style={styles.bookButton}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+              >
+                <MaterialCommunityIcons 
+                  name="airplane-takeoff"
+                  size={20}
+                  color="#fff"
+                  style={{ marginRight: 8 }}
+                />
+                <Text style={styles.bookButtonText}>Book Now</Text>
+              </LinearGradient>
+            </TouchableOpacity>
           </View>
         )}
       </TouchableOpacity>
     </Animated.View>
   );
 };
-
 
 const styles = StyleSheet.create({
   card: {
@@ -186,58 +263,88 @@ const styles = StyleSheet.create({
   details: {
     marginTop: 16,
     paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopColor: '#eee',
+  },
+  infoBlock: {
+    backgroundColor: '#f9faff',
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 2,
+  },
+  sectionTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#3b5998',
+    marginBottom: 10,
   },
   detailRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 6,
+    marginBottom: 10,
   },
   detailText: {
-    fontSize: 13,
-    marginLeft: 8,
+    fontSize: 14,
+    marginLeft: 12,
+    color: '#333',
+    flexShrink: 1,
+  },
+  taxRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 6,
+  },
+  taxLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#555',
+  },
+  taxValue: {
+    fontSize: 14,
+    color: '#555',
+  },
+  priceRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 6,
+  },
+  basePrice: {
+    fontSize: 14,
+    fontWeight: '600',
     color: '#444',
   },
-  details: {
-  marginTop: 16,
-  paddingTop: 12,
-  // no borderTop to keep soft blocks separate
-},
-
-infoBlock: {
-  backgroundColor: '#f9faff',
-  borderRadius: 12,
-  paddingVertical: 12,
-  paddingHorizontal: 16,
-  marginBottom: 16,
-  shadowColor: '#000',
-  shadowOpacity: 0.05,
-  shadowRadius: 10,
-  shadowOffset: { width: 0, height: 4 },
-  elevation: 2,
-},
-
-sectionTitle: {
-  fontSize: 15,
-  fontWeight: '700',
-  color: '#3b5998',
-  marginBottom: 10,
-},
-
-detailRow: {
-  flexDirection: 'row',
-  alignItems: 'center',
-  marginBottom: 10,
-},
-
-detailText: {
-  fontSize: 14,
-  marginLeft: 12,
-  color: '#333',
-  flexShrink: 1,
-},
-
+  basePriceValue: {
+    fontSize: 14,
+    color: '#444',
+  },
+  totalPrice: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#1a73e8',
+  },
+  totalPriceValue: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#1a73e8',
+  },
+  bookButton: {
+    flexDirection: 'row', 
+    borderRadius: 25,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  bookButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
+  },
 });
 
 export default FlightCard;

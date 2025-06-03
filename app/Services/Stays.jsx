@@ -11,7 +11,8 @@ import React, { useState, useRef } from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import Header from '../../components/Header'; // Make sure this has white background or wrap it
+import * as Animatable from 'react-native-animatable';
+import Header from '../../components/Header';
 import { staysData } from '../../data';
 
 const { width } = Dimensions.get('window');
@@ -52,7 +53,7 @@ const StayCard = ({ item }) => {
   };
 
   return (
-    <View style={styles.card}>
+    <Animatable.View animation="fadeInUp" duration={500} delay={100} style={styles.card}>
       <View style={styles.imageWrapper}>
         <FlatList
           data={item.images}
@@ -66,15 +67,19 @@ const StayCard = ({ item }) => {
           onViewableItemsChanged={onViewRef.current}
           viewabilityConfig={viewConfigRef.current}
         />
+
         <View style={styles.iconRow}>
-          <TouchableOpacity onPress={handleHeartPress} style={styles.iconButton}>
-            <Ionicons
-              name={liked ? 'heart' : 'heart-outline'}
-              size={20}
-              color={liked ? '#FF5A5F' : 'white'}
-            />
-          </TouchableOpacity>
+          <Animatable.View animation="bounceIn" duration={600} useNativeDriver>
+            <TouchableOpacity onPress={handleHeartPress} style={styles.iconButton}>
+              <Ionicons
+                name={liked ? 'heart' : 'heart-outline'}
+                size={20}
+                color={liked ? '#FF5A5F' : 'white'}
+              />
+            </TouchableOpacity>
+          </Animatable.View>
         </View>
+
         <View style={styles.paginationDots}>
           {item.images.map((_, i) => (
             <View key={i} style={[styles.dot, activeIndex === i && styles.activeDot]} />
@@ -93,11 +98,9 @@ const StayCard = ({ item }) => {
 
         <Text style={styles.subTitle}>{item.location}</Text>
         <Text style={styles.stayInfo}>Sleeps {item.guests} guests • {item.type}</Text>
-
         <Text style={styles.breakfast}>
           {item.breakfastIncluded ? 'Breakfast included' : 'Breakfast available at extra charge'}
         </Text>
-
         <Text style={styles.description}>{item.description}</Text>
 
         <View style={styles.features}>
@@ -120,7 +123,7 @@ const StayCard = ({ item }) => {
           </View>
         </View>
       </View>
-    </View>
+    </Animatable.View>
   );
 };
 

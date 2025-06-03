@@ -261,7 +261,17 @@ const Cabs = () => {
             </LabeledInput>
           )}
 
-          <TouchableOpacity style={styles.searchBtn}>
+          <TouchableOpacity onPress={() =>
+            router.push({
+              pathname: '/CabSearchResult',
+              params: {
+                from: fromLocation,
+                to: toLocation,
+                start: tripStart.toISOString(),
+               end: tripType === 'RoundTrip' ? tripEnd.toISOString() : '',
+              },
+            })
+          }style={styles.searchBtn}>
             <LinearGradient
               colors={['#3B82F6', '#6366F1', '#8B5CF6']}
               start={{ x: 0, y: 0 }}

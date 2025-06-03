@@ -192,7 +192,7 @@ const FlightPage = () => {
            <TouchableOpacity
            onPress={() => {
   router.push({
-    pathname: '/ResultPage',
+    pathname: '/FlightPages/ResultPage',
     params: {
       from,
       to,

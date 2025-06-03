@@ -10,9 +10,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, useLocalSearchParams } from 'expo-router';
 import ActionSheet from "react-native-actions-sheet";
-import { fullFlights } from '../data';
-import FlightCard from '../components/FlightCard';
-import Filters from '../components/Filters';
+import { fullFlights } from '../../data';
+import FlightCard from '../../components/FlightCard';
+import Filters from '../../components/Filters';
 
 const ResultPage = () => {
   const {

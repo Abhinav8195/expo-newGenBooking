@@ -929,3 +929,172 @@ export const staysData = [
     ]
   }
 ];
+
+
+export const cabdata = [
+  {
+    "carName": "Toyota Innova Crysta",
+    "oldPrice": 4500,
+    "newPrice": 4000,
+    "discountPercent": 11.11,
+    "taxes": 320,
+    "seating": 7,
+    "fuelType": "Diesel",
+    "rating": 4.5,
+    "type": "SUV"
+  },
+  {
+    "carName": "Hyundai i20",
+    "oldPrice": 2500,
+    "newPrice": 2200,
+    "discountPercent": 12.0,
+    "taxes": 180,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.2,
+    "type": "Hatchback"
+  },
+  {
+    "carName": "Honda City",
+    "oldPrice": 3200,
+    "newPrice": 2900,
+    "discountPercent": 9.38,
+    "taxes": 240,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.4,
+    "type": "Sedan"
+  },
+  {
+    "carName": "Mercedes-Benz E-Class",
+    "oldPrice": 9500,
+    "newPrice": 8800,
+    "discountPercent": 7.37,
+    "taxes": 720,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.8,
+    "type": "Luxury"
+  },
+  {
+    "carName": "Tata Nano",
+    "oldPrice": 1800,
+    "newPrice": 1600,
+    "discountPercent": 11.11,
+    "taxes": 120,
+    "seating": 4,
+    "fuelType": "Petrol",
+    "rating": 3.9,
+    "type": "Mini"
+  },
+  {
+    "carName": "Kia Seltos",
+    "oldPrice": 4200,
+    "newPrice": 3900,
+    "discountPercent": 7.14,
+    "taxes": 310,
+    "seating": 5,
+    "fuelType": "Diesel",
+    "rating": 4.6,
+    "type": "SUV"
+  },
+  {
+    "carName": "Maruti Swift",
+    "oldPrice": 2400,
+    "newPrice": 2100,
+    "discountPercent": 12.5,
+    "taxes": 170,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.1,
+    "type": "Hatchback"
+  },
+  {
+    "carName": "Skoda Slavia",
+    "oldPrice": 3100,
+    "newPrice": 2850,
+    "discountPercent": 8.06,
+    "taxes": 220,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.3,
+    "type": "Sedan"
+  },
+  {
+    "carName": "BMW 5 Series",
+    "oldPrice": 10200,
+    "newPrice": 9300,
+    "discountPercent": 8.82,
+    "taxes": 780,
+    "seating": 5,
+    "fuelType": "Diesel",
+    "rating": 4.9,
+    "type": "Luxury"
+  },
+  {
+    "carName": "Renault Kwid",
+    "oldPrice": 2000,
+    "newPrice": 1800,
+    "discountPercent": 10.0,
+    "taxes": 140,
+    "seating": 4,
+    "fuelType": "Petrol",
+    "rating": 4.0,
+    "type": "Mini"
+  },
+  {
+    "carName": "Mahindra XUV700",
+    "oldPrice": 4600,
+    "newPrice": 4300,
+    "discountPercent": 6.52,
+    "taxes": 350,
+    "seating": 7,
+    "fuelType": "Diesel",
+    "rating": 4.7,
+    "type": "SUV"
+  },
+  {
+    "carName": "Volkswagen Polo",
+    "oldPrice": 2600,
+    "newPrice": 2300,
+    "discountPercent": 11.54,
+    "taxes": 190,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.2,
+    "type": "Hatchback"
+  },
+  {
+    "carName": "Hyundai Verna",
+    "oldPrice": 3300,
+    "newPrice": 3000,
+    "discountPercent": 9.09,
+    "taxes": 250,
+    "seating": 5,
+    "fuelType": "Petrol",
+    "rating": 4.4,
+    "type": "Sedan"
+  },
+  {
+    "carName": "Audi A6",
+    "oldPrice": 9800,
+    "newPrice": 9100,
+    "discountPercent": 7.14,
+    "taxes": 750,
+    "seating": 5,
+    "fuelType": "Diesel",
+    "rating": 4.8,
+    "type": "Luxury"
+  },
+  {
+    "carName": "Maruti Alto",
+    "oldPrice": 1900,
+    "newPrice": 1700,
+    "discountPercent": 10.53,
+    "taxes": 130,
+    "seating": 4,
+    "fuelType": "Petrol",
+    "rating": 3.8,
+    "type": "Mini"
+  }
+]
