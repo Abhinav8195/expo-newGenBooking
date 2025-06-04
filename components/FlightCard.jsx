@@ -64,7 +64,9 @@ const FlightCard = ({ flight, index = 0 }) => {
   class: "Economy",
   checkin: "15 Kilograms",
   cabin: "7 KG",
-  image:'https://play-lh.googleusercontent.com/zG1e9Pdw27RYpUo_TpSZcD-zjCeShkN5pxwgy7L-e9hra170T_SpBzcUc5nsBu3gWQ'
+  image:'https://play-lh.googleusercontent.com/zG1e9Pdw27RYpUo_TpSZcD-zjCeShkN5pxwgy7L-e9hra170T_SpBzcUc5nsBu3gWQ',
+  price: 3500,
+  adult:2
 };
 
   // Calculate total price = base price + sum of taxes

@@ -2,11 +2,15 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState, useRef } from 'react';
-import { Animated, Easing, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Animated, Easing, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, KeyboardAvoidingView,
+  Platform,
+  ActivityIndicator, } from 'react-native';
+import TravellerDetails from './TravellerDetails';
 
 const BookNow = () => {
   const [secondsLeft, setSecondsLeft] = useState(5 * 60);
   const { flight } = useLocalSearchParams();
+  const [loading, setlLoading] = useState(false);
 
   // Animation refs
   const fadeAnim = useRef(new Animated.Value(0)).current; // opacity
@@ -21,15 +25,19 @@ const BookNow = () => {
   }
 
   const flightData = JSON.parse(flight);
-  console.log(flightData);
+  
 
-  useEffect(() => {
-    if (secondsLeft <= 0) return;
-    const timer = setInterval(() => {
-      setSecondsLeft((prev) => prev - 1);
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [secondsLeft]);
+useEffect(() => {
+  if (secondsLeft <= 0) {
+    router.replace('/(tabs)/home'); 
+    return;
+  }
+  const timer = setInterval(() => {
+    setSecondsLeft((prev) => prev - 1);
+  }, 1000);
+  return () => clearInterval(timer);
+}, [secondsLeft]);
+
 
   // Animate card on mount
   useEffect(() => {
@@ -65,11 +73,17 @@ const BookNow = () => {
         <Text style={styles.title}>Booking Details</Text>
       </View>
 
-      {/* Timer */}
+        {/* Timer */}
       <View style={styles.timerBox}>
         <Text style={styles.timerText}>Time left: {formatTime()}</Text>
       </View>
 
+          <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0} 
+      >
+        <ScrollView showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
       {/* Flight Card with animation */}
       <Animated.View
         style={[
@@ -152,6 +166,49 @@ const BookNow = () => {
           <Text style={styles.baggageValue}>{flightData.cabin}</Text>
         </View>
       </Animated.View>
+
+      <TravellerDetails adults={flightData.adult}/>
+
+      <View style={{padding:15}}>
+        <View style={{borderRadius:10,borderWidth:1,borderColor:'#ccc'
+        }}>
+            <View>
+              <Text style={{fontWeight:'700',backgroundColor:'#d1eaff',padding:10,borderTopLeftRadius:10,borderTopRightRadius:10}}>Price Summary</Text>
+            </View>
+            <View style={{padding:10}}>
+              <Text style={{fontWeight:'600'}}>Adult x {flightData.adult}</Text>
+            </View>
+            <View style={{padding:10,borderBottomLeftRadius:10,borderBottomRightRadius:10,backgroundColor:'#2196f3'}}>
+              <Text style={{color:'white',fontWeight:'600'}}>Offers and Promo Code</Text>
+            </View>
+        </View>
+
+              <TouchableOpacity
+          disabled={loading}
+          style={{
+            backgroundColor: '#da5200',
+            padding: 10,
+            marginVertical: 10,
+            borderRadius: 10,
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+          }}
+          onPress={() => setlLoading(true)}
+        >
+          {loading ? (
+            <>
+              <ActivityIndicator size="small" color="white" style={{ marginRight: 8 }} />
+              <Text style={{ color: 'white', fontWeight: '500' }}>Booking</Text>
+            </>
+          ) : (
+            <Text style={{ color: 'white', fontWeight: '500' }}>Continue Booking</Text>
+          )}
+        </TouchableOpacity>
+
+      </View>
+    </ScrollView>
+  </KeyboardAvoidingView>
     </View>
   );
 };
@@ -295,6 +352,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 12,
     paddingHorizontal: 20,
+    paddingBottom:10
   },
   baggageLabel: {
     fontWeight: '500',
