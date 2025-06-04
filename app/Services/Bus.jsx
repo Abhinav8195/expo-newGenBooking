@@ -16,6 +16,7 @@ import moment from 'moment';
 import { LinearGradient } from 'expo-linear-gradient';
 import Toast from 'react-native-toast-message';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Header from '../../components/Header';
 
 
 const RECENT_SEARCHES_KEY = '@recent_searches';
@@ -95,15 +96,7 @@ const Bus = () => {
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Entypo name="chevron-left" size={24} color="black" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>
-          Bus Search
-        </Text>
-        <Ionicons name="language" size={24} color="#007AFF" />
-      </View>
+      <Header title={'Bus Search'} />
 
       {/* From input */}
       <View style={{ marginTop: 20 }}>

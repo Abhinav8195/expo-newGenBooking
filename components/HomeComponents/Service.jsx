@@ -13,9 +13,9 @@ import { useRouter } from 'expo-router'
 
 const services = [
   { name: 'Flights', icon: require('../../assets/images/air.png'), route: '/Services/FlightPage' },
-  { name: 'Hotels', icon: require('../../assets/images/hotel.png'), route: '/Services/Stays',params: { type: 'Hotel' } },
-  { name: 'Homestays', icon: require('../../assets/images/homestay.png'), route: '/Services/Stays',  params: { type: 'Homestay' } },
-  { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/Services/Stays', params: { type: 'villas' } },
+  { name: 'Hotels', icon: require('../../assets/images/hotel.png'), route: '/Services/StaySearch',params: { type: 'Hotel' } },
+  { name: 'Homestays', icon: require('../../assets/images/homestay.png'), route: '/Services/StaySearch',  params: { type: 'Homestay' } },
+  { name: 'Villas', icon: require('../../assets/images/building.png'), route: '/Services/StaySearch', params: { type: 'villas' } },
   { name: 'eSIM', icon: require('../../assets/images/internet.png'), route: '/Services/Esim' },
   { name: 'Holiday Packages', icon: require('../../assets/images/luggage.png'), route: '/Services/Holidays' },
   { name: 'Trains', icon: require('../../assets/images/train.png'), route: '/Services/Train' },

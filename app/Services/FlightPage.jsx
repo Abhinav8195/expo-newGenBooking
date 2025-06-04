@@ -9,6 +9,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
+import Header from '../../components/Header';
 
 const CLASS_OPTIONS = ['Economy', 'Premium Economy', 'Business', 'First'];
 
@@ -73,15 +74,8 @@ const FlightPage = () => {
   return (
     <View style={{ flex: 1, backgroundColor: 'white', padding: 20 }}>
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Entypo name="chevron-left" size={24} color="black" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Flight Search</Text>
-        <TouchableOpacity>
-          <Ionicons name="language" size={24} color="#007AFF" />
-        </TouchableOpacity>
-      </View>
+
+      <Header title={'Flight Search'} />
 
       {/* Selector */}
       <View style={styles.selectorContainer}>
@@ -370,6 +364,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderColor: '#007AFF',
     borderWidth: 1,
+    marginTop:15
   },
   selectorButton: {
     flex: 1,

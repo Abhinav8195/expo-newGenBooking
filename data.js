@@ -4,39 +4,47 @@ export const SliderOPtions = [
   {
     id: 1,
     title: 'Latest',
+    filterKey: 'latest',  
     Icon: (props) => <Ionicons name="globe-outline" {...props} />,
   },
   {
     id: 2,
-    title: 'Hotels',
+    title: 'Hotels',   
+    filterKey: 'Hotel', 
     Icon: (props) => <Ionicons name="bed-outline" {...props} />,
   },
   {
     id: 3,
     title: 'Resorts',
+    filterKey: 'resort',
     Icon: (props) => <MaterialCommunityIcons name="beach" {...props} />,
   },
   {
     id: 4,
     title: 'Villas',
+    filterKey: 'villas',
     Icon: (props) => <MaterialCommunityIcons name="home-city-outline" {...props} />,
   },
   {
     id: 5,
     title: 'Islands',
+    filterKey: 'island',
     Icon: (props) => <MaterialCommunityIcons name="island" {...props} />,
   },
   {
     id: 6,
     title: 'Farms',
+    filterKey: 'farm',
     Icon: (props) => <MaterialCommunityIcons name="home-flood" {...props} />,
   },
   {
     id: 7,
     title: 'Hubs',
+    filterKey: 'hub',
     Icon: (props) => <MaterialCommunityIcons name="office-building" {...props} />,
   },
 ];
+
 
 
 export const fullFlights = [
@@ -743,7 +751,7 @@ export const staysData = [
 
   // ----------- Homes -----------
   {
-    type: "Hotel",
+    type: "Hotel || Hotels",
     name: "The Urban Nest",
     images: [
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/595363876.jpg?k=bd7995e28b81700bf33c64a5974d92c1dcffbce243b2e756cd40b8c5efca2621&o=&hp=1",

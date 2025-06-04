@@ -14,6 +14,7 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import { LinearGradient } from 'expo-linear-gradient';
+import Header from '../../components/Header';
 
 const allDestinations = [
   'Thailand',
@@ -66,12 +67,8 @@ const Insurance = () => {
       >
         <View style={styles.overlay}>
           {/* Header */}
-          <View style={styles.header}>
-            <TouchableOpacity onPress={() => router.back()}>
-              <MaterialIcons name="arrow-back-ios" size={20} color="black" />
-            </TouchableOpacity>
-            <Ionicons name="language" size={24} color="#007AFF" />
-          </View>
+          
+          <Header />
 
           <Text style={styles.title}>Insure Your Journey — Wherever You Go</Text>
 

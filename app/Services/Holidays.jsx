@@ -13,6 +13,7 @@ import { router } from 'expo-router';
 import DisplayCarrd from '../../components/HolidaysCards/DisplayCarrd';
 import DisplayCard from '../../components/HolidaysCards/DisplayCarrd';
 import Packages from '../../components/HolidaysCards/Packages';
+import Header from '../../components/Header';
 
 const categories = [
   { name: 'Honeymoon', icon: 'heart-multiple' }, 
@@ -84,21 +85,13 @@ const Holidays = () => {
       contentContainerStyle={{ padding: 20 }}
     >
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Entypo name="chevron-left" size={24} color="black" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Holiday Packages</Text>
-        <TouchableOpacity>
-          <Ionicons name="language" size={24} color="#007AFF" />
-        </TouchableOpacity>
-      </View>
+      <Header title={'Holiday Packages'} />
 
       {/* Categories */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{ marginBottom: 20 }}
+        style={{ marginVertical: 20 }}
       >
         {categories.map((item, index) => {
           const isSelected = selectedCategory === item.name;

@@ -14,6 +14,7 @@ import {
   View,
 } from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import Header from '../../components/Header';
 
 const LabeledInput = ({ label, icon, children }) => (
   <View style={{ marginHorizontal: 16, marginBottom: 12 }}>
@@ -83,13 +84,10 @@ const Cabs = () => {
       keyboardVerticalOffset={Platform.OS === 'ios' ? 80 : 0} // adjust offset if needed
     >
       <View style={styles.container}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Entypo name="chevron-left" size={24} color="black" />
-          </TouchableOpacity>
-          <Text style={styles.headerTitle}>Cab Booking</Text>
-          <Ionicons name="language" size={24} color="#007AFF" />
+        <View style={{paddingHorizontal:20,paddingVertical:10}}>
+          <Header title={'Cab Booking'} />
         </View>
+        
 
         <ScrollView keyboardShouldPersistTaps="handled">
           <LinearGradient

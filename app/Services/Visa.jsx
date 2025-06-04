@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Marquee } from '@animatereactnative/marquee';
 import { router } from 'expo-router';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import Header from '../../components/Header';
 
 const allFlags = ['🇫🇷','🇪🇸','🇺🇸','🇹🇷','🇮🇹','🇲🇽','🇬🇧','🇩🇪','🇹🇭','🇨🇳','🇬🇷','🇦🇹','🇯🇵','🇦🇪','🇭🇰','🇭🇷','🇵🇹','🇷🇺','🇮🇩','🇸🇬','🇳🇱','🇸🇦','🇰🇷','🇨🇭','🇮🇪','🇧🇷','🇨🇦','🇮🇳','🇲🇾','🇻🇳'];
 const flags1 = allFlags.slice(0, Math.ceil(allFlags.length / 2));
@@ -41,11 +42,7 @@ const countries = [
 export default function VisaHomeScreen() {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Ionicons name="arrow-back" size={24} color="black" />
-        </TouchableOpacity>
-      </View>
+      <Header/>
 
       <Marquee spacing={10} speed={0.5} repeatSpacer={30}>
         <View style={styles.flagRow}>

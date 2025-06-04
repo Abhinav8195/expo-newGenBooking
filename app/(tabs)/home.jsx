@@ -91,7 +91,7 @@ const Home = () => {
       <View style={{ borderBottomWidth: 1, borderColor: '#ccc', marginTop: -5 }} />
 
       {/* Main Scrollable Content */}
-      <ScrollView>
+      <ScrollView style={{marginBottom:50}} showsVerticalScrollIndicator={false}>
         <SearchBar />
         <Service />
 

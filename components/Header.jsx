@@ -8,7 +8,7 @@ const Header = ({title}) => {
     <View>
      <View style={styles.header}>
                <TouchableOpacity onPress={() => router.back()}>
-                 <Entypo name="chevron-left" size={24} color="black" />
+                 <Ionicons name="arrow-back" size={24} color="black" />
                </TouchableOpacity>
                <Text style={styles.headerTitle}>{title}</Text>
                <Ionicons name="language" size={24} color="#007AFF" />
