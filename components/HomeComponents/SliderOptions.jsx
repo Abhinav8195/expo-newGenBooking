@@ -13,10 +13,10 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 import * as Haptics from 'expo-haptics';
 
-import { staysData } from '../../data'; // your stays data source
+import { staysData } from '../../data'; 
 
 const { width } = Dimensions.get('window');
-const IMAGE_WIDTH = width - 32; // card width minus margin/padding
+const IMAGE_WIDTH = width - 32; 
 
 const SliderOptions = ({ SliderOPtions }) => {
   const [activeIndex, setActiveIndex] = useState(0);
